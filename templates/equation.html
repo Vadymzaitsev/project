@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Equation
+{% endblock %}
+
+{% block body %}
+    <form action="/equation" method="post">
+        <div class="form-group">
+            <input class="form-control" name="equation" autocomplete ="off" placeholder="The equation" type="text"/>
+        </div>
+
+        <div class="form-group">
+            <input class="form-control" name="guess1" autocomplete = "off" placeholder="Your first guess" type="text"/>
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="guess2"  autocomplete ="off" placeholder="Your second guess" type="text"/>
+        </div>
+        <button class="btn btn-primary" type="submit">Solve</button>
+    </form>
+{% endblock %}
