@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block body %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Equation</th>
+
+                <th>Answer(s)</th>
+                <th>Guesses</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for element in story %}
+                <tr>
+                    <td>{{ element.dates }}</td>
+                    <td>{{ element.equation }}</td>
+                    <td>{{ element.answers }}</td>
+                    <td>{{ element.guessed }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
